@@ -14,7 +14,7 @@ bows = 0
 spamschutz= 0
 
 #BOT Token
-TOKEN = "268360458:AAHYaylj-a4oox1rUZvNobvEXdTRVXkexo8"
+TOKEN = "BOT TOKEN"
 
 
 def on_chat_message(msg):
