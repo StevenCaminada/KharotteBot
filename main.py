@@ -41,7 +41,9 @@ def on_chat_message(msg):
 	elif "makefood" in msg['text']:
 		bot.sendMessage(chat_id, makefoodFunction())
 	elif "makedrink" in msg['text']: 
-		bot.sendMessage(chat_id, makedrinkFunction())	
+		bot.sendMessage(chat_id, makedrinkFunction())
+	elif "rule34" in msg['text']: 
+		bot.sendMessage(chat_id, Rule34Function())
 	else:
 		bot.sendMessage(chat_id, elseFunction())
 
@@ -52,7 +54,8 @@ def helpFunction():
 	message ="/help /cute /bow /joke /makedrink /makefood /neet /weeaboo /kitties"
 	return (message)
 	
-def Rule34Function():
+def Rule34Function(searchword):
+	
 	message ="/Gimme me an input"
 	return (imagedata)	
 
