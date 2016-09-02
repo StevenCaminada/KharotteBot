@@ -43,7 +43,7 @@ def on_chat_message(msg):
 	elif "makedrink" in msg['text']: 
 		bot.sendMessage(chat_id, makedrinkFunction())
 	elif "rule34" in msg['text']: 
-		bot.sendMessage(chat_id, Rule34Function())
+		bot.sendMessage(chat_id, Rule34Function(msg['text']))
 	else:
 		bot.sendMessage(chat_id, elseFunction())
 
