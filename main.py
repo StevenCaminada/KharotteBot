@@ -6,6 +6,7 @@ import threading
 import random
 import telepot
 import random
+import requests
 
 #VARIABLES
 global spamschutz
@@ -55,9 +56,14 @@ def helpFunction():
 	return (message)
 	
 def Rule34Function(searchword):
-	
-	message ="/Gimme me an input"
-	return (imagedata)	
+	if "" in searchword:
+		message = "You didnt specified an search word you brick!"
+	else:	
+		APIURL = "https://rule34.xxx/api.php"
+		r = requests.get(url)
+		results = r.json()
+		message = results
+	return (message)	
 
 def jokeFunction():
 	randomNumber=int(random.randint(0,9))
