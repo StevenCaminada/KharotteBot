@@ -11,8 +11,10 @@ import requests
 #VARIABLES
 global spamschutz
 global bows
+global rule34API
 bows = 0
 spamschutz= 0
+rule34API = "https://rule34.xxx/api.php"
 
 #BOT Token
 TOKEN = "BOT TOKEN"
@@ -59,9 +61,10 @@ def Rule34Function(searchword):
 	if "" in searchword:
 		message = "You didnt specified an search word you brick!"
 	else:	
-		APIURL = "https://rule34.xxx/api.php"
-		r = requests.get(url)
-		results = r.json()
+		usock = urllib.urlopen(rule34API) 
+		xmldoc = minidom.parse(usock) 
+		usock.close() 
+		results = xmldoc 
 		message = results
 	return (message)	
 
