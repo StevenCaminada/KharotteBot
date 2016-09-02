@@ -51,6 +51,10 @@ def on_chat_message(msg):
 def helpFunction():
 	message ="/help /cute /bow /joke /makedrink /makefood /neet /weeaboo /kitties"
 	return (message)
+	
+def Rule34Function():
+	message ="/Gimme me an input"
+	return (imagedata)	
 
 def jokeFunction():
 	randomNumber=int(random.randint(0,9))
